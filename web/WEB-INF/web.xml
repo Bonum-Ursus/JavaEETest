@@ -3,6 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+
     <servlet>
         <servlet-name>MyFirstServlet</servlet-name>
         <servlet-class>MyFirstServlet</servlet-class>
@@ -11,12 +12,77 @@
         <servlet-name>MyFirstServlet</servlet-name>
         <url-pattern>/hello</url-pattern>
     </servlet-mapping>
+
     <servlet>
-        <servlet-name>FirstJSP</servlet-name>
-        <jsp-file>/firstJSP.jsp</jsp-file>
+        <servlet-name>RedirectServlet</servlet-name>
+        <servlet-class>RedirectServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>FirstJSP</servlet-name>
+        <servlet-name>RedirectServlet</servlet-name>
+        <url-pattern>/redirect-servlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EnterCountServlet</servlet-name>
+        <servlet-class>EnterCountServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EnterCountServlet</servlet-name>
+        <url-pattern>/count</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TestJSP</servlet-name>
+        <jsp-file>/TestJSP.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestJSP</servlet-name>
         <url-pattern>/hi</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RedirectJSP</servlet-name>
+        <jsp-file>/redirect.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RedirectJSP</servlet-name>
+        <url-pattern>/redirect-jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Count JSP</servlet-name>
+        <jsp-file>/showCart.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Count JSP</servlet-name>
+        <url-pattern>/count-jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SetCookiesServlet</servlet-name>
+        <servlet-class>eve.cookies.SetCookiesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SetCookiesServlet</servlet-name>
+        <url-pattern>/set-cookies</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>GetCookiesServlet</servlet-name>
+        <servlet-class>eve.cookies.GetCookiesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetCookiesServlet</servlet-name>
+        <url-pattern>/get-cookies</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>DeleteCookiesServlet</servlet-name>
+        <servlet-class>eve.cookies.DeleteCookiesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteCookiesServlet</servlet-name>
+        <url-pattern>/delete-cookies</url-pattern>
+    </servlet-mapping>
+
 </web-app>

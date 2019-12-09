@@ -13,6 +13,16 @@
 <body>
     <h1>Testing JSP</h1>
     <p>
+        <%
+            String name = request.getParameter("name");
+            String nick = request.getParameter("nick");
+        %>
+        <p>
+        <%= "Hi, " + name%>
+        </p>
+        <p>
+        <%= "Your code name will be: " + nick%>
+        </p>
         <%@ page import="java.util.Date, eve.Information" %>
         <%
             Information information = new Information();

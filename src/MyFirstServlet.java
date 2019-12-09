@@ -13,9 +13,12 @@ public class MyFirstServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String name = request.getParameter("name");
+        String nick  = request.getParameter("nick");
+
         PrintWriter pw = response.getWriter();
         pw.println("<html>");
-        pw.println("<h1>My FIRST servlet</h1>");
+        pw.println("<h1><p>Hi, " + name +"!</p> Your nickname will be: "+ nick +"</h1>");
         pw.println("</html>");
     }
 }

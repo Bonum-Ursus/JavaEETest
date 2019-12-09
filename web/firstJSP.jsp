@@ -13,8 +13,9 @@
 <body>
     <h1>Testing JSP</h1>
     <p>
+        <%@ page import="java.util.Date" %>
         <%
-            java.util.Date now = new java.util.Date();
+            Date now = new Date();
             String someString = "Текущая дата: " + now;
         %>
         <%= someString%>
@@ -23,6 +24,7 @@
                 out.println("<p>" + "Count: " + i + "</p>");
             }
         %>
+
     </p>
 </body>
 </html>
